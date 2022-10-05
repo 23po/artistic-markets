@@ -1,6 +1,6 @@
-## Project Owner: Calvin Kodalo
+<h1 align="center">Project Owner: Calvin Kodalo</h1>
 
-## Project Name: Online Art Marketplace
+<h1 align = "center">Project Name: Online Art Marketplace</h1>
 
 # Problem Statement
 
@@ -12,7 +12,17 @@ A nft marketplace is an inspiration for this project, but remains out of the sco
 
 ## MVP
 
+<ul>
+<li>
 Landing page
+</li>
+<li>
 Order Page
+</li>
+<li>
 Contact form
+</li>
+<li>
 Add Order Page
+</li>
+</ul>
