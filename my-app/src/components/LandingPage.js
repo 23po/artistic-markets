@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
+import AvatarCollection from "./AvatarCollection";
 import AvatarCard from "./AvatarCard";
+import AddAvatarForm from "./AddAvatarForm";
 
 function LandingPage() {
   
@@ -14,12 +16,9 @@ function LandingPage() {
 
     return (
     <div>
-        {avatars.map((avatar) => {
-            console.log(avatar)
-        return <AvatarCard key = {avatar.id} avatar = {avatar}/>
-    }
-        )}
-    </div>
+         <AddAvatarForm/>
+        <AvatarCollection avatars = {avatars}/>
+       </div>
   );
 }
 
