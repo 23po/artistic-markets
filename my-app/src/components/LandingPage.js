@@ -1,4 +1,7 @@
 import React, {useEffect, useState} from "react";
+import { Routes, Route } from "react-router-dom";
+import Login from "./Login";
+import NavBar from "./NavBar";
 import AvatarCollection from "./AvatarCollection";
 import AvatarCard from "./AvatarCard";
 import AddAvatarForm from "./AddAvatarForm";
