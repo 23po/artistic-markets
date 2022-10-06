@@ -1,6 +1,11 @@
 import React from "react";
 
-function Login() {
+function Login({onLogin}) {
+
+  //const [logins SetLogins] = useState([])
+  
+
+
   return (
     <div>
       <h1>Login</h1>
