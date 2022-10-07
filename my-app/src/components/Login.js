@@ -1,4 +1,5 @@
 import React from "react";
+import '../Login.css';
 
 function Login({onLogin}) {
 
@@ -7,7 +8,7 @@ function Login({onLogin}) {
 
 
   return (
-    <div>
+    <div classname = "login-wrapper">
       <h1>Login</h1>
       <form>
         <div>
