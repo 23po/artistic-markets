@@ -12,7 +12,7 @@ function LandingPage() {
     const [formData, setFormData] = useState([])
 
     useEffect( () => {
-    fetch("https://fierce-crag-14351.herokuapp.com/Avatars")
+    fetch(`${process.env.REACT_APP_API_URL}/Avatars`)
         .then(res => res.json())
         .then(data => setAvatars(data))
 
