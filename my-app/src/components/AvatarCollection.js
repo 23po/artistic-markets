@@ -17,7 +17,6 @@ return (
           width: 300,
         }}>
             <p>Name: {avatar.name}</p>
-      <p>Gender: {avatar.gender}</p>
       <img src = {avatar.Avatar}/>
         </Card>
     }

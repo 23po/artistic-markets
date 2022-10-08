@@ -37,6 +37,8 @@ function handleSubmit () {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(formData)
+        }, ProgressEvent => {
+            console.log('Upload Progress:' + Math.round(ProgressEvent.loaded/ProgressEvent.total * 100) + '%' )
         })
         .then(res => res.json())
         .then(data => console.log(data))
