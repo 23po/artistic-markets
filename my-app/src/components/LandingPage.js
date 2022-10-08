@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import AvatarCollection from "./AvatarCollection";
-import AvatarCard from "./AvatarCard";
+//import AvatarCard from "./AvatarCard";
 import AddAvatarForm from "./AddAvatarForm";
 
 function LandingPage() {
