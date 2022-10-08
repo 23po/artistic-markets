@@ -35,3 +35,7 @@ body {
 .ui.grid {
   padding: 0px 20px;
 }
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}

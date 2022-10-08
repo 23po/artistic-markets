@@ -8,13 +8,13 @@ import AddAvatarForm from "./AddAvatarForm";
 
 function LandingPage() {
   
-    const [avatars, setAvatars] = useState([])
+    const [pictures, setPictures] = useState([])
     const [formData, setFormData] = useState([])
 
     useEffect( () => {
-    fetch(`${process.env.REACT_APP_API_URL}/Avatars`)
+    fetch(`${process.env.REACT_APP_API_URL}/pictures`)
         .then(res => res.json())
-        .then(data => setAvatars(data))
+        .then(data => setPictures(data))
 
     }, [])
 
@@ -31,7 +31,7 @@ function handleChange (e) {
 }    
 
 function handleSubmit () {
-        fetch("http://localhost:3000/Avatars", {
+        fetch("http://localhost:3000/pictures", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -47,7 +47,7 @@ function handleSubmit () {
     return (
     <div>
          <AddAvatarForm handleChange = {handleChange} handleSubmit = {handleSubmit}/>
-        <AvatarCollection avatars = {avatars}/>
+        <AvatarCollection pictures = {pictures}/>
        </div>
   );
 }
