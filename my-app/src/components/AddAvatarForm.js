@@ -9,29 +9,31 @@ const { TextArea } = Input;
 
 const AddAvatarForm = () => {
   const [form] = Form.useForm();
-  const [formLayout, setFormLayout] = useState('vertical');
+  const [formLayout, setFormLayout] = useState('horizontal');
 
   const onFormLayoutChange = ({ layout }) => {
     setFormLayout(layout);
   };
 
   const formItemLayout =
-    formLayout === 'vertical'
+    formLayout === 'horizontal'
       ? {
           labelCol: {
             span: 4,
+            
           },
           wrapperCol: {
             span: 8,
+            
           },
         }
       : null;
   const buttonItemLayout =
-    formLayout === 'vertical'
+    formLayout === 'horizontal'
       ? {
           wrapperCol: {
-            span: 10,
-            offset: 4,
+            span: 6,
+            offset: 2,
           },
         }
       : null;
@@ -47,15 +49,16 @@ const AddAvatarForm = () => {
       onValuesChange={onFormLayoutChange}
     >
 
-      <Upload>
-       <Button icon={<UploadOutlined />}>Click to Upload</Button>
-      </Upload>
+    
       <Form.Item label="Field A">
         <Input placeholder="input placeholder" />
       </Form.Item>
       <Form.Item label="TextArea">
           <TextArea rows={4} />
         </Form.Item>
+        <Upload>
+       <Button icon={<UploadOutlined />}>Click to Upload</Button>
+      </Upload>
       <Form.Item {...buttonItemLayout}>
         <Button type="primary">Submit</Button>
       </Form.Item>

@@ -6,7 +6,7 @@ import AvatarCollection from "./AvatarCollection";
 //import AvatarCard from "./AvatarCard";
 import AddAvatarForm from "./AddAvatarForm";
 
-function LandingPage() {
+function Marketplace() {
   
     const [pictures, setPictures] = useState([])
     const [formData, setFormData] = useState([])
@@ -52,4 +52,4 @@ function handleSubmit () {
   );
 }
 
-export default LandingPage;
+export default Marketplace;

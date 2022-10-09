@@ -6,8 +6,9 @@ import NavBar from "./NavBar";
 //import AvatarCollection from "./AvatarCollection";
 //import AvatarCard from "./AvatarCard";
 //import AddAvatarForm from "./AddAvatarForm";
-import LandingPage from './LandingPage';
+import Marketplace from './Marketplace';
 import About from './About';
+import TopPage from './TopPage';
 
 
 
@@ -16,7 +17,9 @@ function App() {
     <div className="App">
       <NavBar/>
       <Routes>
-        <Route path="/" element = {<LandingPage/>}>
+        <Route path="/" element = {<TopPage/>}>
+        </Route>
+        <Route path="/Markeplace" element = {<Marketplace/>}>
         </Route>
         <Route path="/Login" element = {<Login/>}>
         </Route>
