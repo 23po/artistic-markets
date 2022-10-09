@@ -4,7 +4,9 @@ import Login from "./Login";
 import NavBar from "./NavBar";
 import AvatarCollection from "./AvatarCollection";
 //import AvatarCard from "./AvatarCard";
-import AddAvatarForm from "./AddAvatarForm";
+import AddAvatarForm from "./UploadForm";
+import {Input} from 'antd'
+ const {Search} = Input
 
 function Marketplace() {
   
@@ -46,15 +48,13 @@ function handleSubmit () {
 
     return (
     <div>
-        <div className="ui large fluid icon input">
-        <input
-        //value = {search}  
-        type="text"
-        placeholder="Search"       
-        //onChange={e => onSearchChange(e.target.value)}
-      />
-       <i className="circular search link icon"></i>
-        </div>
+         <Search
+      placeholder="input search text"
+      //onSearch={onSearch}
+      style={{
+        width: 200,
+      }}
+    />
         <AvatarCollection pictures = {pictures}/>
     </div>
   );

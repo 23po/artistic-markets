@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 //import AvatarCard from "./AvatarCard";
-import AddAvatarForm from "./AddAvatarForm";
+import AddAvatarForm from "./UploadForm";
 import Card from "antd/lib/card/Card";
 import Avatar from "antd/lib/avatar/avatar";
 import './Card.css'

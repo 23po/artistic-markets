@@ -9,6 +9,7 @@ import NavBar from "./NavBar";
 import Marketplace from './Marketplace';
 import About from './About';
 import TopPage from './TopPage';
+import UploadForm from './UploadForm';
 
 
 
@@ -24,6 +25,8 @@ function App() {
         <Route path="/Login" element = {<Login/>}>
         </Route>
         <Route path="/About" element = {<About/>}> 
+        </Route>
+        <Route path="/UploadForm" element = {<UploadForm/>}>
         </Route>
       </Routes>
     </div>

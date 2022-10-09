@@ -1,6 +1,8 @@
 import React from "react";
+import TopPage from "./TopPage";
 import { NavLink } from "react-router-dom";
 import { Button,PageHeader } from 'antd';
+import { useNavigate } from "react-router-dom";
 
 const linkStyles = {
   display: "inline-block",
@@ -13,6 +15,15 @@ const linkStyles = {
 };
 
 function NavBar() {
+
+  //const navigate = useNavigate();
+    
+    
+  //function handleClick () {
+    //  navigate.push("/marketplace");
+  //}
+
+
   return (
     <div>
       <NavLink

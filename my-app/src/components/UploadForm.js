@@ -1,13 +1,13 @@
 import { Button, Form, Input, Radio, Upload } from 'antd';
 import React, { useState } from 'react';
-import './AddAvatarForm.css'
+import './UploadForm.css'
 import { UploadOutlined } from '@ant-design/icons';
 
 
 const { TextArea } = Input;
 
 
-const AddAvatarForm = () => {
+const UploadForm = () => {
   const [form] = Form.useForm();
   const [formLayout, setFormLayout] = useState('horizontal');
 
@@ -66,7 +66,7 @@ const AddAvatarForm = () => {
   );
 };
 
-export default AddAvatarForm;
+export default UploadForm;
 /*import React from "react";
 
 function AddAvatarForm({handleChange, handleSubmit}) {
