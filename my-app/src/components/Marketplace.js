@@ -46,9 +46,17 @@ function handleSubmit () {
 
     return (
     <div>
-         <AddAvatarForm handleChange = {handleChange} handleSubmit = {handleSubmit}/>
+        <div className="ui large fluid icon input">
+        <input
+        //value = {search}  
+        type="text"
+        placeholder="Search"       
+        //onChange={e => onSearchChange(e.target.value)}
+      />
+       <i className="circular search link icon"></i>
+        </div>
         <AvatarCollection pictures = {pictures}/>
-       </div>
+    </div>
   );
 }
 

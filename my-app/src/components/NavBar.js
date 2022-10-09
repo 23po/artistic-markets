@@ -1,13 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Button,PageHeader } from 'antd';
 
 const linkStyles = {
-  display: "flex",
-  flex-direction: "column",
-  justify-content: "right",
-  width: "50px",
+  display: "inline-block",
+  width: "auto",
   padding: "12px",
-  margin: "0 6px 6px",
+  margin: "6px 6px 6px",
   background: "blue",
   textDecoration: "none",
   color: "white",
@@ -17,14 +16,28 @@ function NavBar() {
   return (
     <div>
       <NavLink
+        
         to="/"
+        exact
+        style={linkStyles}
+
+      >
+        <Button>
+        Home
+        </Button>
+        
+      </NavLink>
+      <NavLink
+        to="/marketplace"
         exact
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
         }}
       >
-        Home
+        <Button>
+        Markeplace
+        </Button>
       </NavLink>
       <NavLink
         to="/about"
@@ -34,17 +47,9 @@ function NavBar() {
           background: "darkblue",
         }}
       >
+       <Button>
         About
-      </NavLink>
-      <NavLink
-        to="/login"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}
-      >
-        Login
+        </Button>
       </NavLink>
     </div>
   );

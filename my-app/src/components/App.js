@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element = {<TopPage/>}>
         </Route>
-        <Route path="/Markeplace" element = {<Marketplace/>}>
+        <Route path="/Marketplace" element = {<Marketplace/>}>
         </Route>
         <Route path="/Login" element = {<Login/>}>
         </Route>
