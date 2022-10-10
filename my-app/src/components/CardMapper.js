@@ -10,7 +10,7 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 import Meta from "antd/lib/card/Meta"
 
 //const {Meta}  = Card;
-function AvatarCollection({pictures}) {
+function CardMapper({pictures}) {
  
 return (
     <div className="site-card-border-less-wrapper ui four column grid">
@@ -47,7 +47,7 @@ return (
   );
 }
 
-export default AvatarCollection;
+export default CardMapper;
 
 /*div className="ui four column grid">
       <p>Collection of Bots</p>

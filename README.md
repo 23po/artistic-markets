@@ -17,12 +17,12 @@ A nft marketplace is an inspiration for this project, but remains out of the sco
 Landing page
 </li>
 <li>
-Order Page
+Marketplace
 </li>
 <li>
 Contact form
 </li>
 <li>
-Add Order Page
+Upload Form
 </li>
 </ul>
