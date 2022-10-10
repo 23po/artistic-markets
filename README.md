@@ -31,5 +31,7 @@ Upload Form
 
 When you open the app on this link https://starlit-seahorse-a2ab4a.netlify.app/ you get to a landing page. Here you choose whether to upload a pic or work of art from your computer to the marketplace. Alternatively, you can choose to go straight to the Marketplace and see the pics there. 
 
-You can switch through 3 pages on the navbar. However the content for this pages remain work in progress. Much of this remains work in progress.  
+You can switch through 3 pages on the navbar. However the content for this pages remain work in progress. Much of this remains work in progress.
+
+<p>This project is created by the owner of this github site</p>
 
