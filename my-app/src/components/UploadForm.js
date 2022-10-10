@@ -74,21 +74,33 @@ export default UploadForm;*/
 
 function UploadForm({handleChange, handleSubmit}) {
   const [formData, setFormData] = useState([])
+  
+  
   function handleChange (e) {
+     e.preventDefault()
     console.log("changing")
     setFormData({
         ...formData,
-        [e.target.name]: e.target.value 
+        //[e.target.name]: e.target.value, 
+        [e.target.name]: e.target.value
     },
     console.log(formData)
     )
-
-
-    
-
 }    
 
-function handleSubmit () {
+function specialHandler (e) {
+  console.log(e.target.files[0])
+   const loc = URL.createObjectURL(e.target.files[0])
+   console.log(loc)
+  setFormData({
+    ...formData,
+    loc
+  })
+}
+console.log(formData)
+
+function handleSubmit (e) {
+    e.preventDefault()
         fetch(`${process.env.REACT_APP_API_URL}/pictures`, {
             method: "POST",
             headers: {
@@ -107,9 +119,9 @@ function handleSubmit () {
       <form className="ui form">
         <div className="inline fields" >
           <input type="text" name="name" placeholder="name" onBlur ={handleChange}/>
-          <input type="text" name="description" placeholder="description" onBlur ={handleChange}/>
+          <input type="text" name="desc" placeholder="description" onBlur ={handleChange}/>
           
-          <input type="file"name="url" onChange={handleChange}/>
+          <input type="file"name="loc" accept=".jpg, .png, .gif" onBlur={specialHandler}/>
         </div>
         <button onClick = {handleSubmit}>
           Upload
