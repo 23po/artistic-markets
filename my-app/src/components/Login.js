@@ -1,7 +1,8 @@
 import React from "react";
 import '../Login.css';
 
-function Login({onLogin}) {
+//this component was not integrated to MVP
+function Login() {
 
   //const [logins SetLogins] = useState([])
   

@@ -1,13 +1,9 @@
-import logo from '../logo.svg';
 import '../App.css';
 import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import NavBar from "./NavBar";
-//import AvatarCollection from "./AvatarCollection";
-//import AvatarCard from "./AvatarCard";
-//import AddAvatarForm from "./AddAvatarForm";
 import Marketplace from './Marketplace';
-import About from './About';
+import Contact from './Contact';
 import TopPage from './TopPage';
 import UploadForm from './UploadForm';
 
@@ -24,7 +20,7 @@ function App() {
         </Route>
         <Route path="/Login" element = {<Login/>}>
         </Route>
-        <Route path="/About" element = {<About/>}> 
+        <Route path="/About" element = {<Contact/>}> 
         </Route>
         <Route path="/UploadForm" element = {<UploadForm/>}>
         </Route>

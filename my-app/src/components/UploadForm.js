@@ -4,6 +4,64 @@ import './UploadForm.css'
 import { UploadOutlined } from '@ant-design/icons';
 
 
+function UploadForm({handleChange, handleSubmit}) {
+  const [formData, setFormData] = useState([])
+  
+  
+  function handleChange (e) {
+     e.preventDefault()
+    console.log("changing")
+    setFormData({
+        ...formData, 
+        [e.target.name]: e.target.value
+    },
+    console.log(formData)
+    )
+}    
+
+//converting file object to url and updating to form data 
+function specialHandler (e) {
+  const loc = URL.createObjectURL(e.target.files[0])
+  setFormData({
+    ...formData,
+    loc
+  })
+}
+
+//making a post request
+function handleSubmit (e) {
+    e.preventDefault()
+        fetch(`${process.env.REACT_APP_API_URL}/pictures`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        }, ProgressEvent => {
+            console.log('Upload Progress:' + Math.round(ProgressEvent.loaded/ProgressEvent.total * 100) + '%' )
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+    
+  return (
+    <div className="ui segment">
+      <form className="ui form">
+        <div className="inline fields" >
+          <input type="text" name="name" placeholder="name" onBlur ={handleChange}/>
+          <input type="text" name="desc" placeholder="description" onBlur ={handleChange}/>
+          <input type="file"name="loc" accept=".jpg, .png, .gif" onBlur={specialHandler}/>
+        </div>
+        <button onClick = {handleSubmit}>
+          Upload
+        </button>
+      </form>
+    </div>
+    );
+}
+export default UploadForm
+
+//for future reference
 /*const { TextArea } = Input;
 
 
@@ -69,65 +127,3 @@ function UploadForm ({handleChange, handleSubmit}) {
 };
 
 export default UploadForm;*/
-
-
-
-function UploadForm({handleChange, handleSubmit}) {
-  const [formData, setFormData] = useState([])
-  
-  
-  function handleChange (e) {
-     e.preventDefault()
-    console.log("changing")
-    setFormData({
-        ...formData,
-        //[e.target.name]: e.target.value, 
-        [e.target.name]: e.target.value
-    },
-    console.log(formData)
-    )
-}    
-
-function specialHandler (e) {
-  console.log(e.target.files[0])
-   const loc = URL.createObjectURL(e.target.files[0])
-   console.log(loc)
-  setFormData({
-    ...formData,
-    loc
-  })
-}
-console.log(formData)
-
-function handleSubmit (e) {
-    e.preventDefault()
-        fetch(`${process.env.REACT_APP_API_URL}/pictures`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        }, ProgressEvent => {
-            console.log('Upload Progress:' + Math.round(ProgressEvent.loaded/ProgressEvent.total * 100) + '%' )
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
-    }
-    
-  return (
-        <div className="ui segment">
-      <form className="ui form">
-        <div className="inline fields" >
-          <input type="text" name="name" placeholder="name" onBlur ={handleChange}/>
-          <input type="text" name="desc" placeholder="description" onBlur ={handleChange}/>
-          
-          <input type="file"name="loc" accept=".jpg, .png, .gif" onBlur={specialHandler}/>
-        </div>
-        <button onClick = {handleSubmit}>
-          Upload
-        </button>
-      </form>
-    </div>
-    );
-}
-export default UploadForm

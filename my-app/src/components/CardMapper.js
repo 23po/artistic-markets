@@ -1,6 +1,4 @@
-import React, {useEffect, useState} from "react";
-//import AvatarCard from "./AvatarCard";
-import AddAvatarForm from "./UploadForm";
+import React from "react";
 import Card from "antd/lib/card/Card";
 import Avatar from "antd/lib/avatar/avatar";
 import './Card.css'
@@ -11,7 +9,8 @@ import Meta from "antd/lib/card/Meta"
 
 //const {Meta}  = Card;
 function CardMapper({pictures}) {
- 
+
+//produces cards content using array map
 return (
     <div className="site-card-border-less-wrapper ui four column grid">
         <div className="row">
@@ -48,6 +47,8 @@ return (
 }
 
 export default CardMapper;
+
+// code below is for my future reference
 
 /*div className="ui four column grid">
       <p>Collection of Bots</p>
