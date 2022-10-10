@@ -42,7 +42,7 @@ function NavBar() {
         </Button>
       </NavLink>
       <NavLink
-        to="/about"
+        to="/contact"
         exact
         style={linkStyles}
         activeStyle={{
@@ -50,7 +50,7 @@ function NavBar() {
         }}
       >
        <Button>
-        About
+        Contact
         </Button>
       </NavLink>
     </div>
