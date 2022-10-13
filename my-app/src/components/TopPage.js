@@ -1,5 +1,6 @@
 import React from "react";
 import AntHeader from "./AntHeader";
+import AntCarousel from "./AntCarousel";
 import {Button} from 'antd'
 import { useNavigate } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function TopPage ({handleClick}) {
     return (
         <div>
             <AntHeader/>
+            <AntCarousel/>
             <div className="landing">
             <h3>SELECT WHAT YOU'D LIKE:</h3>
             <Button key="1" type="primary" onClick = {handleUpload}>

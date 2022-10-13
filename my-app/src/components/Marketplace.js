@@ -2,7 +2,9 @@ import React, {useEffect, useState} from "react";
 import CardMapper from "./CardMapper";
 import {Input} from 'antd'
 import './Marketplace.css'
- const {Search} = Input
+import AntHeader from "./AntHeader";
+
+const {Search} = Input
 
 // 
 function Marketplace() {
@@ -20,6 +22,7 @@ useEffect( () => {
 //send payload to CardMapper and also adds Search component
 return (
     <div>
+         <AntHeader/>
          <Search
             placeholder="input search text"
             //onSearch={onSearch}
