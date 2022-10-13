@@ -13,7 +13,12 @@ function CardMapper({pictures}) {
 //produces cards content using array map
 return (
   <Col>
-    <Row>
+    <Row style={{
+      marginRight: 32,
+      marginLeft: 110,
+      marginTop: 30,
+      marginBottom: 30
+    }}>
         {pictures.map((picture) => {
             console.log(picture)
         return <Card key = {picture.id} picture = {picture}

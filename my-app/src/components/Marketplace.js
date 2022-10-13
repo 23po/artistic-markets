@@ -19,15 +19,17 @@ useEffect( () => {
 
 //send payload to CardMapper and also adds Search component
 return (
-    <div class = "flexbox-container">
+    <div>
          <Search
             placeholder="input search text"
             //onSearch={onSearch}
             style={{
             width: 200,
-                  }}/>
+                  }}
+                  />
+                  
         <CardMapper pictures = {pictures}/>
-       
+      
     </div>
   );
 }
