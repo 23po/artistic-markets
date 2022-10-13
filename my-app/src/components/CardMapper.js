@@ -20,13 +20,14 @@ return (
         bordered={true}
         style={{
           width: 150,
+          height:272,
           
         }}
         cover={
           <img
             alt="oops"
             src={ picture.loc}
-            style={{ objectFit: 'inline-block',}}
+            
             
           />
         }
@@ -35,18 +36,18 @@ return (
           
           [
           
-          //<Button size={"small"} key = "2" type = "primary" style = {{objectFit: 'contain'}} ghost danger>
-            //Buy
-          //</Button>
+          <Button size={"small"} key = "2" type = "primary" style = {{objectFit: 'contain'}} ghost danger>
+            Buy
+          </Button>
         
-          <SettingOutlined key="setting" />,
-          <EditOutlined key="edit" />,
-          <EllipsisOutlined key="ellipsis" />,
+          //<SettingOutlined key="setting" />,
+          //<EditOutlined key="edit" />,
+          //<EllipsisOutlined key="ellipsis" />,
         ]}
         >
-             <Meta  
-      avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-      description={picture.desc}
+             <Meta  style = {{width: 100, height: 22,}}
+      //avatar={<Avatar style = {{width: 50, height: 50,}} src="https://joeschmoe.io/api/v1/random" />}
+      description={picture.name}
 
     />
         </Card>
