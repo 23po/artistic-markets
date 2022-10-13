@@ -19,7 +19,8 @@ return (
         return <Card key = {picture.id} picture = {picture}
         bordered={true}
         style={{
-          width: 300,
+          width: 150,
+          
         }}
         cover={
           <img
