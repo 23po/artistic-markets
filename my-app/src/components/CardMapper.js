@@ -2,8 +2,8 @@ import React from "react";
 import Card from "antd/lib/card/Card";
 import Avatar from "antd/lib/avatar/avatar";
 import './Card.css'
-//import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
-import {Button} from 'antd';
+import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import {Button, Row, Col} from 'antd';
 
 import Meta from "antd/lib/card/Meta"
 
@@ -12,8 +12,8 @@ function CardMapper({pictures}) {
 
 //produces cards content using array map
 return (
-    <div className="site-card-border-less-wrapper ui four column grid">
-        <div className="row">
+  <Col>
+    <Row>
         {pictures.map((picture) => {
             console.log(picture)
         return <Card key = {picture.id} picture = {picture}
@@ -26,28 +26,34 @@ return (
           <img
             alt="oops"
             src={ picture.loc}
+            style={{ objectFit: 'inline-block',}}
+            
           />
         }
         
-        actions={[
-          <Button key = "2" type = "primary">
-            Press Me
-          </Button>
-          //<SettingOutlined key="setting" />,
-          //<EditOutlined key="edit" />,
-          //<EllipsisOutlined key="ellipsis" />,
+        actions={
+          
+          [
+          
+          //<Button size={"small"} key = "2" type = "primary" style = {{objectFit: 'contain'}} ghost danger>
+            //Buy
+          //</Button>
+        
+          <SettingOutlined key="setting" />,
+          <EditOutlined key="edit" />,
+          <EllipsisOutlined key="ellipsis" />,
         ]}
         >
-             <Meta 
+             <Meta  
       avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-      title= {picture.name}
       description={picture.desc}
+
     />
         </Card>
     }
         )}
-        </div>
-    </div>
+        </Row>
+    </Col>
   );
 }
 
