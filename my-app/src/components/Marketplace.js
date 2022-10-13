@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import CardMapper from "./CardMapper";
 import {Input} from 'antd'
+import './Marketplace.css'
  const {Search} = Input
 
 // 
@@ -18,7 +19,7 @@ useEffect( () => {
 
 //send payload to CardMapper and also adds Search component
 return (
-    <div>
+    <div class = "flexbox-container">
          <Search
             placeholder="input search text"
             //onSearch={onSearch}
