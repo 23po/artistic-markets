@@ -2,12 +2,28 @@ import React, {useState, useEffect} from 'react'
 import { Carousel, Row, Col, Card } from 'antd';
 import './AntCarousel.css'
 import { fixControlledValue } from 'antd/lib/input/Input';
+
 const contentStyle = {
-    height: '100px',
+    height: '300px',
+    marginLeft: '500px',
+    width: '300px',
     textAlign: 'center',
-    lineHeight: '100px',
-    background: 'aliceblue',
+    lineHeight: '160px',
+    
   };
+
+  const carouselContainer = {
+    background: 'aliceblue',
+    position:'relative'
+  }
+
+  const contentStyleTwo = {
+    height: '160px',
+    marginTop: '200px',
+    marginLeft: '100px',
+    lineHeight: '160px'
+    
+  }
 
   
 
@@ -19,34 +35,30 @@ function AntCarousel() {
     //.then (data => setJoe(data));
 
   return (
-    <Col>
-      <Row>
-   <Carousel autoplay style ={contentStyle}>
-   <div>
-  <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
+    <div style = {carouselContainer}>
+    <Carousel>
+      <div>
+    <img style = {contentStyleTwo} src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
    </div>
    <div>
-     <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Photo.png"/>
+     <img style = {contentStyleTwo} src = "https://www.pngmart.com/files/22/African-Art-PNG-Photo.png"/>
    </div>
    <div>
-     <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Picture.png"/>
+     <img style = {contentStyleTwo} src = "https://www.pngmart.com/files/22/African-Art-PNG-Picture.png"/>
    </div>
- </Carousel>
- </Row>
- <Row>
- <Carousel autoplay style ={contentStyle}>
+    </Carousel>
+    <Carousel autoplay>
    <div>
-  <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
+  <img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
    </div>
    <div>
-     <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Photo.png"/>
+     <img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Photo.png"/>
    </div>
    <div>
-     <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Picture.png"/>
-   </div>
- </Carousel>
- </Row>
-  </Col>
+     <img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Picture.png"/>
+   </div>  
+</Carousel>
+</div>
   )
 }
 

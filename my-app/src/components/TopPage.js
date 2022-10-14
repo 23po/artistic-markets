@@ -29,7 +29,7 @@ function TopPage ({handleClick}) {
             <h3>Or</h3>
                 <Button type="primary" onClick = {handleClick}>View Marketplace</Button>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
