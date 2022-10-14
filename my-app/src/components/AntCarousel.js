@@ -1,30 +1,52 @@
-import React from 'react'
-import { Carousel } from 'antd';
-
+import React, {useState, useEffect} from 'react'
+import { Carousel, Row, Col, Card } from 'antd';
+import './AntCarousel.css'
+import { fixControlledValue } from 'antd/lib/input/Input';
 const contentStyle = {
-    height: '320px',
-    color: '#fff',
-    lineHeight: '160px',
+    height: '100px',
     textAlign: 'center',
-    background: '#364d79',
+    lineHeight: '100px',
+    background: 'aliceblue',
   };
 
+  
+
 function AntCarousel() {
+    //const [joe, setJoe] = useState([]);
+
+    //fetch("https://joeschmoe.io/api/v1/random",{ mode: 'no-cors'})
+    //.then (res => res.json())
+    //.then (data => setJoe(data));
+
   return (
-    <Carousel autoplay>
-    <div>
-      <h3 style={contentStyle}>1</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>2</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>3</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>4</h3>
-    </div>
-  </Carousel>
+    <Col>
+      <Row>
+   <Carousel autoplay style ={contentStyle}>
+   <div>
+  <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
+   </div>
+   <div>
+     <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Photo.png"/>
+   </div>
+   <div>
+     <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Picture.png"/>
+   </div>
+ </Carousel>
+ </Row>
+ <Row>
+ <Carousel autoplay style ={contentStyle}>
+   <div>
+  <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
+   </div>
+   <div>
+     <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Photo.png"/>
+   </div>
+   <div>
+     <img src = "https://www.pngmart.com/files/22/African-Art-PNG-Picture.png"/>
+   </div>
+ </Carousel>
+ </Row>
+  </Col>
   )
 }
 

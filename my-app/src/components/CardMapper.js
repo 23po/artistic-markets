@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "antd/lib/card/Card";
 import Avatar from "antd/lib/avatar/avatar";
-import './Card.css'
+//import './Card.css'
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import {Button, Row, Col} from 'antd';
 
