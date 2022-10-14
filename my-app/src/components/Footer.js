@@ -1,8 +1,16 @@
 import React from 'react'
 
-function Footer() {
+const footerStyle = {
+    height: '120px',
+    color: '#fff',
+    lineHeight: '160px',
+    textAlign: 'center',
+    background: '#364d79',
+  };
+
+  function Footer() {
   return (
-    <div>Footer</div>
+    <div style = {footerStyle}>Footer</div>
   )
 }
 
