@@ -14,7 +14,6 @@ const contentStyle = {
 
   const carouselContainer = {
     background: 'aliceblue',
-    position:'relative'
   }
 
   const contentStyleTwo = {
@@ -36,17 +35,7 @@ function AntCarousel() {
 
   return (
     <div style = {carouselContainer}>
-    <Carousel>
-      <div>
-    <img style = {contentStyleTwo} src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
-   </div>
-   <div>
-     <img style = {contentStyleTwo} src = "https://www.pngmart.com/files/22/African-Art-PNG-Photo.png"/>
-   </div>
-   <div>
-     <img style = {contentStyleTwo} src = "https://www.pngmart.com/files/22/African-Art-PNG-Picture.png"/>
-   </div>
-    </Carousel>
+    
     <Carousel autoplay>
    <div>
   <img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
