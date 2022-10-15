@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Carousel, Row, Col, Card } from 'antd';
 import './AntCarousel.css'
 import { fixControlledValue } from 'antd/lib/input/Input';
+import { Space, Typography } from 'antd';
 
 const contentStyle = {
     height: '300px',

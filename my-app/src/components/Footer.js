@@ -2,7 +2,7 @@ import { fixControlledValue } from 'antd/lib/input/Input';
 import React from 'react'
 
 const footerStyle = {
-    height: '80px',
+    height: '70px',
     color: '#fff',
     lineHeight: '160px',
     textAlign: 'center',

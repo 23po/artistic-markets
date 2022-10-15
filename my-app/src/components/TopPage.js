@@ -22,13 +22,12 @@ function TopPage ({handleClick}) {
         <div>
             <AntHeader/>
             <AntCarousel/>
-            <div className="landing">
             <Button key="1" type="primary" onClick = {handleUpload}>
           Upload a Pic
             </Button>
             <h3>Or</h3>
                 <Button type="primary" onClick = {handleClick}>View Marketplace</Button>
-            </div>
+    
             <Footer />
         </div>
     )
