@@ -34,21 +34,44 @@ function AntCarousel() {
     //.then (data => setJoe(data));
 
   return (
-    <div style = {carouselContainer}>
-    
-    <Carousel autoplay>
-   <div>
-  <img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
-   </div>
-   <div>
-     <img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Photo.png"/>
-   </div>
-   <div>
-     <img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Picture.png"/>
-   </div>  
-</Carousel>
+<div class="container">
+  <div class="box">
+    <img src="https://source.unsplash.com/1000x800"/>
+    <span>CSS</span>
+  </div>
+  <div class="box">
+    <img src="https://source.unsplash.com/1000x802"/>
+    <span>Image</span>
+  </div>
+  <div class="box">
+    <img src="https://source.unsplash.com/1000x804"/>
+    <span>Hover</span>
+  </div>
+  <div class="box">
+    <img src="https://source.unsplash.com/1000x806"/>
+    <span>Effect</span>
+  </div>
 </div>
   )
 }
 
 export default AntCarousel
+
+
+
+/*
+<div style = {carouselContainer}>
+    
+<Carousel autoplay>
+<div>
+<img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Isolated-HD.png"/>
+</div>
+<div>
+ <img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Photo.png"/>
+</div>
+<div>
+ <img style = {contentStyle} src = "https://www.pngmart.com/files/22/African-Art-PNG-Picture.png"/>
+</div>  
+</Carousel>
+</div>
+*/

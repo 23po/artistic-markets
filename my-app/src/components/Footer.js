@@ -2,7 +2,7 @@ import { fixControlledValue } from 'antd/lib/input/Input';
 import React from 'react'
 
 const footerStyle = {
-    height: '120px',
+    height: '80px',
     color: '#fff',
     lineHeight: '160px',
     textAlign: 'center',
@@ -16,7 +16,7 @@ const footerStyle = {
 
   function Footer() {
   return (
-    <div style = {footerStyle}>Footer</div>
+    <div style = {footerStyle}>calvin kodalo 2022</div>
   )
 }
 
