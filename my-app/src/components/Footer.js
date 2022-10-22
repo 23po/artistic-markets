@@ -4,9 +4,9 @@ import React from 'react'
 const footerStyle = {
     height: '70px',
     color: '#fff',
-    lineHeight: '160px',
+    lineHeight: '80px',
     textAlign: 'center',
-    background: '#364d79',
+    
     position: 'fixed',
     width: '100%',
     left: '0',

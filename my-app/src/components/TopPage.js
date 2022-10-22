@@ -25,8 +25,8 @@ function TopPage ({handleClick}) {
             <Button key="1" type="primary" onClick = {handleUpload}>
           Upload a Pic
             </Button>
-            <h3>Or</h3>
-                <Button type="primary" onClick = {handleClick}>View Marketplace</Button>
+            
+                
     
             <Footer />
         </div>
@@ -34,3 +34,7 @@ function TopPage ({handleClick}) {
 }
 
 export default TopPage;
+
+/*
+<Button type="primary" onClick = {handleClick}>View Marketplace</Button>
+*/

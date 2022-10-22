@@ -8,7 +8,7 @@ const linkStyles = {
   width: "auto",
   padding: "12px",
   margin: "6px 6px 6px",
-  background: "blue",
+  
   textDecoration: "none",
   color: "white",
 };
