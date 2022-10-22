@@ -1,9 +1,13 @@
 import { Button, Descriptions, PageHeader } from 'antd';
 import React from 'react';
 
+const headerStyle = {
+  background: 'aliceblue'
+}
+
 const AntHeader = () => (
-  <div className="site-page-header-ghost-wrapper">
-    <PageHeader
+  <div>
+    <PageHeader style = {headerStyle}
       title="NIFTY"
       subTitle="mint and view nfts"
     >

@@ -7,6 +7,11 @@ import { useNavigate } from "react-router-dom";
 
 
 function TopPage ({handleClick}) {
+
+   const buttonStyle = {
+        background: 'red'
+    }
+
     const navigate = useNavigate();
     
     //implementing programmatic navigation for uploading
@@ -22,7 +27,7 @@ function TopPage ({handleClick}) {
         <div>
             <AntHeader/>
             <AntCarousel/>
-            <Button key="1" type="primary" onClick = {handleUpload}>
+            <Button key="1" style = {buttonStyle} type="primary" onClick = {handleUpload}>
           Upload a Pic
             </Button>
             

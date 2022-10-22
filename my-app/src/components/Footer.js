@@ -3,10 +3,10 @@ import React from 'react'
 
 const footerStyle = {
     height: '70px',
-    color: '#fff',
+    color: 'black',
     lineHeight: '80px',
     textAlign: 'center',
-    
+    background: '#F0F8FF',
     position: 'fixed',
     width: '100%',
     left: '0',
@@ -16,7 +16,7 @@ const footerStyle = {
 
   function Footer() {
   return (
-    <div style = {footerStyle}>calvin kodalo 2022</div>
+    <div style = {footerStyle}>2022</div>
   )
 }
 
